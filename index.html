@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="main-content">
+      <h2>Registration form</h2>
+      <p>Please fill in your details</p>
+
+      <form id="my-form">
+        <label for="name">Your name:</label>
+        <input type="text" id="name" placeholder="Enter your full name" />
+        <span id="name-span"></span>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" />
+        <span id="email-span"></span>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+        />
+        <span id="password-span"></span>
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" max="2005-12-31" />
+        <span id="dob-span"></span>
+        <label for="tac">Terms and Conditions</label>
+        <input type="checkbox" id="tac" />
+        <span>Read the terms and conditions</span>
+        <span id="tac-span"></span>
+        <button id="submit-button" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div
+      id="modal"
+      style="
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-30%, -50%);
+        padding: 20px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      "
+    >
+      <p>Thank you for submitting your details</p>
+      <button id="closeModal">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
